@@ -1,0 +1,4 @@
+model_instructions_file = "../AGENTS.md"
+
+[mcp_servers.notion]
+url = "https://mcp.notion.com/mcp"
