@@ -95,6 +95,17 @@ Use a short kebab-case feature slug that matches the feature name. Keep all arti
 
 Do not write the brief to technical design, UX, user story, implementation plan, or backlog files unless the user explicitly asks for a separate artifact after the feature brief exists.
 
+## Raw idea sources
+
+If the user asks for a feature brief from an idea in `docs/feature-ideas.md`, read the relevant idea and treat it as raw/vague input only.
+
+- Do not skip the normal interview flow because the idea exists in a file.
+- Use the idea as a seed for the first discovery question, not as complete feature intent.
+- Keep asking one focused question at a time until the usual required context is resolved: problem, target user/scenario, business goal, MVP boundary, out-of-scope boundary, success signals, constraints, and Deep Module fit.
+- Preserve the hard-start requirements for `docs/product-vision.md` and `docs/deep-module-map.md`.
+- After the local `docs/features/<feature-slug>/feature_brief.md` file is successfully written, remove the promoted idea from `docs/feature-ideas.md` while preserving the rest of the file.
+- Do not delete the idea before the feature brief file exists, and do not remove unrelated ideas or headings.
+
 ## Interview posture
 
 Be deliberately interrogative before drafting. The feature brief should reflect the user's intent, not the assistant's assumptions.
@@ -282,31 +293,6 @@ When shaping a feature brief, prefer:
 6. honest boundaries and tradeoffs
 7. measurable success signals
 8. non-technical acceptance criteria
-
-## Optional Notion export after local write
-
-After the local Markdown file is written successfully, optionally offer Notion export. Local Markdown remains the canonical pipeline artifact and Notion is only a convenience export destination.
-
-1. Do not check Notion export before the local file exists.
-2. After writing the local file, read `.sibu/state.json` if available.
-3. Offer export only when all are true:
-   - `selectedMcpServers` includes `notion`
-   - `mcpServerConfigs.notion.docsParentPage` is present
-   - Notion MCP tools are available in the current agent session
-4. If export is unavailable, do nothing else and finish with the normal local path response.
-5. If export is available, ask for explicit opt-in before creating or modifying any Notion page.
-6. If the user declines, do nothing else.
-7. If the user accepts, create or reuse Notion organization pages under the configured parent page:
-
-```txt
-<docsParentPage>
-└── <repo name>
-    └── Features
-        └── <feature name>
-            └── Feature Brief
-```
-
-Create a new document page for the just-written artifact content. Do not write Notion URLs back into local Markdown. Report Notion export success or a clear Notion export failure, while preserving the local file as the completed artifact either way.
 
 ## Final response behavior
 

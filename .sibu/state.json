@@ -1,8 +1,8 @@
 {
   "sibuVersion": "0.13.2",
-  "templateVersion": "98",
+  "templateVersion": "103",
   "generatedAt": "2026-05-19T16:37:40.980Z",
-  "updatedAt": "2026-05-19T16:37:40.980Z",
+  "updatedAt": "2026-05-19T19:43:39.072Z",
   "selectedAgents": [
     "codex"
   ],
@@ -23,8 +23,8 @@
   "managedFiles": {
     "AGENTS.md": {
       "template": "AGENTS.md",
-      "templateVersion": "29",
-      "sha256": "e78d80b885161664c0cd36a7c1e614d7ff2a02fdf33d41f5ed458e6fe5913a98",
+      "templateVersion": "30",
+      "sha256": "16edecb500274319d2b4c831a56f961609ab67953704646ca619b530cafa2c0d",
       "status": "managed"
     },
     ".codex/config.toml": {
@@ -53,20 +53,20 @@
     },
     ".agents/skills/feature-brief-writer/SKILL.md": {
       "template": "skills/feature-brief-writer/SKILL.md",
-      "templateVersion": "10",
-      "sha256": "fff5d780a050b9b0f30ac11161d5769cade5a7ec6f6a623c3057011ff23b6d6e",
+      "templateVersion": "13",
+      "sha256": "f5ba4d759d28c75c7a30946bda9f9adb16f5a2b2305a13f059cf178fedb3c999",
       "status": "managed"
     },
     ".agents/skills/technical-design-writer/SKILL.md": {
       "template": "skills/technical-design-writer/SKILL.md",
-      "templateVersion": "18",
-      "sha256": "4827dcfdeeac0a273fd668a0e4e4f46231f64e0d167f2b2236cf2cb4b4d5c7f3",
+      "templateVersion": "19",
+      "sha256": "8502cfa7d0010a9a9f75721957de40fb7b114e713311213e3cf7713f105df5cb",
       "status": "managed"
     },
     ".agents/skills/scrum-master-planner/SKILL.md": {
       "template": "skills/scrum-master-planner/SKILL.md",
-      "templateVersion": "11",
-      "sha256": "ca746d09099e88d46ba01b15b9c5d830bba558f720b1e5d2eb791775b41f11bc",
+      "templateVersion": "12",
+      "sha256": "0b8f07c47a70f7a46d38938f606056de8251de72b3e7ad55d614d2a5f061c748",
       "status": "managed"
     },
     ".agents/skills/ai-implementation-planner/SKILL.md": {
@@ -85,6 +85,12 @@
       "template": "skills/ai-prompt-engineer-master/SKILL.md",
       "templateVersion": "2",
       "sha256": "3a8b3a7ad9677511d8e777065c0ab43d846449cebb188f1fdbb765f0ca2dbc21",
+      "status": "managed"
+    },
+    ".agents/skills/feature-idea-capture/SKILL.md": {
+      "template": "skills/feature-idea-capture/SKILL.md",
+      "templateVersion": "1",
+      "sha256": "829f56e517cf2322ea29e7cee3752a1ac04a310c2bcfa7824fd7859d1521dcae",
       "status": "managed"
     }
   }
