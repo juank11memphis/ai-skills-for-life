@@ -1,6 +1,6 @@
 ---
 name: initial-market-analysis
-description: Use when a user wants initial market validation or market analysis for a local or small-area business idea before building a full business plan. Guides the user through focused clarification, browses for current market evidence, and produces an evidence-aware Initial Market Analysis Report with risks and validation next steps.
+description: Use when a user wants initial market validation or market analysis for a local or small-area business idea before building a full business plan. Guides focused clarification, browses for current market evidence, saves an evidence-aware Markdown report to disk, and replies only with the created file path plus a brief note.
 ---
 
 # Initial Market Analysis
@@ -32,6 +32,7 @@ Be a focused, practical interviewer before becoming an analyst.
 - Offer examples or a recommended answer when that helps the user move forward.
 - Push for specific answers instead of accepting vague ones too quickly.
 - Do not browse, analyze, or produce the final report until the minimum context is clear enough.
+- Save the final report as a Markdown file; do not paste the full report into chat.
 - Stay warm, direct, grounded, and non-corporate.
 
 ## Minimum context before research
@@ -124,7 +125,23 @@ Cite or link sources when the environment supports it. If direct links are not a
 
 ## Final artifact
 
-When research and analysis are complete, produce a Markdown report with this structure:
+When research and analysis are complete, write the report to a Markdown file instead of printing it in chat.
+
+Default output directory:
+
+```txt
+docs/market-analysis/
+```
+
+Use a short kebab-case filename based on the market and idea, for example:
+
+```txt
+docs/market-analysis/gam-educational-toys-market-analysis.md
+```
+
+If the assistant cannot write files in the current environment, provide the Markdown content only as a fallback and clearly state the intended file path.
+
+The saved Markdown report must use this structure:
 
 ```md
 # Initial Market Analysis Report
@@ -165,7 +182,16 @@ The verdict must be lightweight and evidence-aware:
 - **High Risk** — evidence suggests serious market, differentiation, demand, or execution concerns.
 - **Insufficient Evidence** — available evidence is too thin or unreliable to judge.
 
-Always end with practical real-world validation steps, such as customer conversations, competitor visits, landing-page tests, small preorders, survey questions, price tests, observation sessions, or calls to local experts.
+Always end the saved report with practical real-world validation steps, such as customer conversations, competitor visits, landing-page tests, small preorders, survey questions, price tests, observation sessions, or calls to local experts.
+
+## Final response behavior
+
+After writing the Markdown file, reply only with:
+
+- the file path created or updated
+- a one-sentence note that the market analysis report was saved
+
+Do not paste the full report, long excerpts, source notes, or the analysis body into the chat/terminal unless the user explicitly asks for inline output.
 
 ## Out of scope
 
