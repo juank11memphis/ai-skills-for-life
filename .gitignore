@@ -2,6 +2,3 @@
 
 # Ignore all docs except the canonical product/context docs.
 docs/**
-!docs/
-!docs/deep-module-map.md
-!docs/product-vision.md
